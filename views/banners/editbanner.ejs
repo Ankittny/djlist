@@ -1,0 +1,111 @@
+ 
+ <%- include('../header') %>
+ <%- include('../sidebar') %>
+ <!-- ============================================================== -->
+ <div class="main-content">
+
+    <div class="page-content">
+        <div class="container-fluid">
+
+          
+            <!-- end page title -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0">Add Banner</h4>
+                        </div><!-- end card header -->
+
+                        <div class="card-body"> 
+                            <form  method="post"  action="/banner/addbanner" enctype="multipart/form-data">
+                                <div class="mt-4">  
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="mb-3">
+                                                <label for="cleave-ccard" class="form-label">Title</label>
+                                                <input type="text" class="form-control" id="cleave-ccard" name="title" placeholder="Enate Title..">
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+
+                                        <div class="col-xl-6">
+                                            <div class="mb-3">
+                                                <label for="cleave-delimiters" class="form-label">Banner Slug</label>
+                                                <input type="text" name="slug" class="form-control" id="cleave-delimiters" placeholder="Enter Slug..">
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                    </div><!-- end row -->
+
+                                    <div class="row">
+                                       
+                                        <% if(loginMessage.length > 0){ %>
+                                            <div class="alert alert-danger" role="alert">
+                                                <strong>Well done!</strong> <%=loginMessage%>
+                                            </div>
+                                        <% } %>
+
+
+                                        <div class="col-xl-6">
+                                            <div class="mb-3">
+                                                <label for="cleave-delimiter" class="form-label">Select Status</label>
+                                                <select class="form-control" name="status">
+                                                    <option value="1">ENABLE</option>
+                                                    <option value="0">DISABLE</option>
+                                                 
+                                                </select>
+                                            </div>
+                                        </div><!-- end col -->
+
+
+
+                                        <div class="col-xl-6">
+                                            <div class="mb-3">
+                                                <label for="cleave-prefix" class="form-label">Image</label>
+                                                <input type="file" class="form-control" name="image" id="cleave-prefix">
+                                            </div>
+                                        </div><!-- end col -->
+                                    </div><!-- end row -->
+
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="mb-3 mb-xl-0">
+                                                <input type="submit" class="btn btn-success">
+                                            </div>
+                                        </div><!-- end col -->
+
+                                      
+                                    </div><!-- end row -->
+
+                                </div>
+                            </form><!-- end form -->
+                        </div><!-- end card-body -->
+                    </div><!-- end card -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div> <!-- container-fluid -->
+    </div>
+    <!-- End Page-content -->
+
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <script>document.write(new Date().getFullYear())</script> © Velzon.
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-sm-end d-none d-sm-block">
+                        Design & Develop by Themesbrand
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- end main content-->
+
+<%- include('../footer') %>
